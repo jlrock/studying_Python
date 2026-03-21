@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
-# 1. Criando a Matriz do livro
+# 1. Criação da Matriz do livro
 A = np.array([
     [0.95, 0.04, 0, 0],
     [0.05, 0.85, 0, 0],
