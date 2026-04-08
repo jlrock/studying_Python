@@ -11,7 +11,7 @@ A = np.array([
 ])
 
 x = np.array([1.0, 0.0, 0.0, 0.0])
-dias = 100
+dias = 200
 historico = [x]
 
 for t in range(dias):
