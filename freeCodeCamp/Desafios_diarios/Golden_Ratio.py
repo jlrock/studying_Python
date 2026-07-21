@@ -20,5 +20,9 @@ def is_golden_ratio(a, b):
         return True
     return False
 
-print('\n', is_golden_ratio(21, 34), '\n', is_golden_ratio(15, 20), '\n', is_golden_ratio(8, 13), '\n', 
-    is_golden_ratio(10, 16), '\n', is_golden_ratio(1618, 1000), '\n', is_golden_ratio(88, 55), '\n')
+print(is_golden_ratio(21, 34))
+print(is_golden_ratio(15, 20))
+print(is_golden_ratio(8, 13))
+print(is_golden_ratio(10, 16))
+print(is_golden_ratio(1618, 1000))
+print(is_golden_ratio(88, 55))

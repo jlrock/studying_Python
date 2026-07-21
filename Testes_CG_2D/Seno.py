@@ -19,7 +19,7 @@ def desenhar_seno(superficie, cor):
         y = centro_y - int(math.sin(x*frequencia)*amplitude)
         
         setPixel(superficie, x, y, (0, 0, 0))
-  
+
 rodando = True
 while rodando:
     for evento in pygame.event.get():
