@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
-# 1. Criação da Matriz do livro
+# Criação da matriz do livro
 A = np.array([
     [0.95, 0.04, 0, 0],
     [0.05, 0.85, 0, 0],
@@ -11,7 +11,7 @@ A = np.array([
 ])
 
 x = np.array([1.0, 0.0, 0.0, 0.0])
-dias = 200
+dias = 100
 historico = [x]
 
 for t in range(dias):
@@ -19,7 +19,7 @@ for t in range(dias):
     historico.append(x)
 historico = np.array(historico)
 
-# 2. Configuração da Figura e Eixos
+# Configuração da figura e eixos
 fig, ax = plt.subplots(figsize=(10, 6))
 ax.set_xlim(0, dias)
 ax.set_ylim(0, 1.00)
@@ -32,13 +32,13 @@ labels = ['Suscetíveis', 'Infectados', 'Recuperados', 'Falecidos']
 linhas = [ax.plot([], [], lw=2, color=cores[i], label=labels[i])[0] for i in range(4)]
 ax.legend(loc='center right')
 
-# 3. Função de Animação
+# Função de animação
 def atualizar(frame):
     for i in range(4):
         linhas[i].set_data(range(frame), historico[:frame, i])
     return linhas
 
-# 4. Criação da Animação
+# Criação da animação
 ani = FuncAnimation(fig, atualizar, frames=len(historico), interval=30, blit=True, repeat=True, repeat_delay=3000)
 
 plt.grid(True, linestyle='--', alpha=0.5)
